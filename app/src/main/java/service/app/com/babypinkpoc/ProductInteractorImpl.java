@@ -60,7 +60,7 @@ public class ProductInteractorImpl implements ProductListInteractor {
             @Override
             public void success(ProductList recordsList, Response response) {
                 String data = recordsList.getRecords().get(0).getAttributes().getRecords().get(0).getProductDescription();
-                Toast.makeText(mContext,"size" + data,Toast.LENGTH_SHORT).show();
+               // Toast.makeText(mContext,"size" + data,Toast.LENGTH_SHORT).show();
                 callBackListener.onSuccess(mContext, recordsList.getRecords().get(0).getAttributes().getRecords());
             }
 

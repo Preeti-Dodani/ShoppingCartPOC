@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import service.app.com.babypinkpoc.Util.AppUtil;
 import service.app.com.babypinkpoc.view.AddToCart;
 import service.app.com.babypinkpoc.view.AddToCartView;
 
@@ -26,7 +27,7 @@ public class ProductDetailsFragment extends Fragment  {
     private final static String FRAGMENT_TAG = "FRAGMENTB_TAG"; // using uppercase since it's a constant
 
 
-    private  String mProductDesc;
+    private  String mProductDesc,mProductPrice,mProdUrl;
 
     public interface MyInterface {
         public void onTrigger();
@@ -58,8 +59,11 @@ public class ProductDetailsFragment extends Fragment  {
 
         if(b!=null){
             mProductDesc = b.getString("PROD_DESC");
-//            mProductPrice = b.getString(Util.PROD_AMOUNT);
-//            mProdUrl = b.getString(Util.PROD_IMAGE);
+            AppUtil.Prod_desc = mProductDesc;
+         mProductPrice = b.getString("PROD_AMOUNT");
+            AppUtil.Prod_price = mProductDesc;
+              mProdUrl = b.getString("PROD_IMAGE");
+            AppUtil.final_url_iamge= mProdUrl;
 //            AddToCart f = (AddToCart)getFragmentManager().findFragmentByTag(FRAGMENT_TAG);
 //          String v ="preeti";
 //        f.productdetailslistner(v);

@@ -15,8 +15,9 @@ import android.widget.Toast;
 
 import service.app.com.babypinkpoc.view.ProductListFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements counterlistner{
     private Toolbar toolbar;
+    private TextView mtextViewCounter;
 
 
 
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+        mtextViewCounter =(TextView)findViewById(R.id.counter);
 
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -65,6 +67,11 @@ public class MainActivity extends AppCompatActivity {
         if(toolbar!=null){
             getSupportActionBar().hide();
         }
+    }
+
+    @Override
+    public void updateCounter(int value) {
+        mtextViewCounter.setText(String.valueOf(value));
     }
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {

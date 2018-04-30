@@ -11,6 +11,11 @@ import java.io.InputStream;
 
 public class AppUtil {
 
+    public static String Prod_desc ="prod_desc";
+    public static String Prod_price ="prod_price";
+
+    public static String final_url_iamge ="prod_image";
+
     public static Context mContext;
     public static String readJsonCountries(Context context){
         mContext = context;

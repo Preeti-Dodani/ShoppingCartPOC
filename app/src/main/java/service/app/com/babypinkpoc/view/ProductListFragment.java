@@ -135,7 +135,7 @@ public class ProductListFragment extends Fragment implements ProductListFragment
         public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
             int id = adapterView.getId();
             int cat_id =  categoryDataArrayList.get(i).getId();
-            Toast.makeText(getActivity(),"call" + cat_id,Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getActivity(),"call" + cat_id,Toast.LENGTH_SHORT).show();
             mProductListPresenter.fetchCategoryProduct(getActivity(),String.valueOf(cat_id));
             //mAdapter.notifyDataSetChanged();
         }
