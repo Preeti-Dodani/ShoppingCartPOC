@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:layout_gravity="right" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="99"
+        android:textSize="10sp"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>
+
+
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+
+
+    <!--android:layout_width="48dp"-->
+    <!--android:layout_height="fill_parent"-->
+    <!--android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--android:padding="2dp"-->
+    <!--android:layout_gravity="right" >-->
+    <!--<ImageView-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_height="80dp"-->
+        <!--android:clickable="true"-->
+        <!--android:layout_marginTop="3dp"-->
+       <!--android:src="@drawable/bag" />-->
+
+    <!--&lt;!&ndash; Badge Count &ndash;&gt;-->
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/actionbar_notifcation_textview"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="99"/>&ndash;&gt;-->
+
+<!--</RelativeLayout>-->
