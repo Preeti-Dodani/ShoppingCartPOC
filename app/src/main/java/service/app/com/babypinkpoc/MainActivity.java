@@ -7,6 +7,8 @@ import android.app.Fragment;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,13 +19,20 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
 
 
+
     private RelativeLayout mBadgeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        ///showToolbar();
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         Toast.makeText(getApplicationContext(), "MAinactivyt", Toast.LENGTH_SHORT).show();
         android.support.v4.app.FragmentManager manager = ((AppCompatActivity)this).getSupportFragmentManager();
@@ -83,19 +92,34 @@ public class MainActivity extends AppCompatActivity {
 //        return true;
 //    }
 //
+//      @Override
+//    public boolean onPrepareOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.main_menu_cart, menu);
+//        MenuItem item = menu.findItem(R.id.badge);
+//        MenuItemCompat.setActionView(item, R.layout.menu_cart_layout);
+//       // mBadgeLayout = (RelativeLayout) menu.findItem(R.id.badge).getActionView();
+//       mBadgeLayout = (RelativeLayout)   MenuItemCompat.getActionView(item);
+//
+//        //mBadgeLayout  = (RelativeLayout) MenuItemCompat.getActionView(item);
+//
+//        TextView tv = (TextView) mBadgeLayout.findViewById(R.id.counter);
+//        tv.setText("12");
+//        return true;
+//
+//    }
+
+
+
 //    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu_cart, menu);
-        MenuItem item = menu.findItem(R.id.badge);
-        MenuItemCompat.setActionView(item, R.layout.menu_cart_layout);
-       // mBadgeLayout = (RelativeLayout) menu.findItem(R.id.badge).getActionView();
-       mBadgeLayout = (RelativeLayout)   MenuItemCompat.getActionView(item);
-
-        //mBadgeLayout  = (RelativeLayout) MenuItemCompat.getActionView(item);
-
-        TextView tv = (TextView) mBadgeLayout.findViewById(R.id.counter);
-        tv.setText("12");
-        return true;
-
-    }
+//    public boolean onPrepareOptionsMenu(final Menu menu) {
+//
+//        getMenuInflater().inflate(R.menu.main_menu_cart, menu);
+//        mBadgeLayout = (RelativeLayout) menu.findItem(R.id.menu_cart).getActionView();
+//       // mBadgeLayout.setClickable(true);
+//        //TextView c = (TextView) mBadgeLayout.findViewById(R.id.counter);
+//        // Handle visibility of cart counter view.
+//        //updateBadgeCount(mItemsInCart);
+//
+//        return true;
+//    }
 }

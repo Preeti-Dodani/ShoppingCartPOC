@@ -6,21 +6,24 @@
     android:layout_gravity="right" >
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
         android:clickable="true"
-        android:scaleType="fitCenter"
-
-        android:src="@mipmap/ic_launcher"/>
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/bag_new"/>
 
     <TextView
         android:id="@+id/counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:padding="2dp"
+        android:background="@drawable/rounded_textview"
+        android:layout_alignParentRight="true"
+
         android:text="99"
-        android:textSize="10sp"
-        android:textColor="@android:color/black" />
+        android:textSize="8sp"
+        android:textColor="@android:color/white" />
 
 </RelativeLayout>
 

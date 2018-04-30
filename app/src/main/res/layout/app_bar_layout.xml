@@ -9,7 +9,6 @@
         <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:background="@android:color/white"
         android:layout_height="wrap_content">
 
 
@@ -18,8 +17,12 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/black"
-            >
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+                <include
+                    layout="@layout/menu_cart_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
 
         </android.support.v7.widget.Toolbar>
